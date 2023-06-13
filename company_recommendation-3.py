@@ -11,7 +11,7 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 import torch
-import nltk
+# import nltk
 import json
 import re
 
