@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta, timezone
 from utils import naver_news_api, preprocess_text
 # import streamlit as st
-import nltk
 
 
 # 현재 시각 구하기 (한국 시간대)
