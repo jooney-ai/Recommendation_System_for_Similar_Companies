@@ -1,6 +1,3 @@
-import nltk
-nltk.download()
-from nltk.stem import WordNetLemmatizer
 import html
 import re
 
@@ -14,7 +11,7 @@ def preprocess(text):
     text = re.sub(r"[^가-힣a-zA-Z\s]", "", text)
 
     # 토큰화
-    tokens = nltk.word_tokenize(text)
+    tokens = text.split()
     
     # 불용어 제거
     # stop_words = set(stopwords.words('korean'))  # 불용어 목록은 해당 언어에 맞게 설정
@@ -30,8 +27,7 @@ def preprocess(text):
 
     
     # 어근 추출 또는 표제어 추출
-    lemmatizer = WordNetLemmatizer()
-    tokens = [lemmatizer.lemmatize(token) for token in tokens if len(token) > 1]
+    tokens = [ token for token in tokens if len(token) > 1 ]
     # tokens = [token for token in tokens if len(token) > 1]
     
     # 정규화
@@ -51,11 +47,11 @@ def preprocess_unescape(text):
     text = html.unescape(text)
 
     # 토큰화
-    tokens = nltk.word_tokenize(text)
+    tokens = text.split()
     
     # 어근 추출 또는 표제어 추출
     lemmatizer = WordNetLemmatizer()
-    tokens = [lemmatizer.lemmatize(token) for token in tokens if len(token) > 1]
+    tokens = [ token for token in tokens if len(token) > 1 ]
 
     # 전처리된 텍스트 반환
     preprocessed_text = ' '.join(tokens)
