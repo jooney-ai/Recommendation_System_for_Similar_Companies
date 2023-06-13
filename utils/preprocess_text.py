@@ -1,5 +1,6 @@
-import nltk
 nltk.download()
+
+import nltk
 from nltk.stem import WordNetLemmatizer
 import html
 import re
