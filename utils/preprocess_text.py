@@ -1,7 +1,7 @@
-from nltk.stem import WordNetLemmatizer
-nltk.download()
-import html
 import nltk
+nltk.download()
+from nltk.stem import WordNetLemmatizer
+import html
 import re
 
 
