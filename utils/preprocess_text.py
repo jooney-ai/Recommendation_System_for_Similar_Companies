@@ -1,6 +1,5 @@
-nltk.download()
-
 import nltk
+nltk.download()
 from nltk.stem import WordNetLemmatizer
 import html
 import re
