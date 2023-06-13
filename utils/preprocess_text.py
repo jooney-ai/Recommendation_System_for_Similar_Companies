@@ -1,4 +1,5 @@
 from nltk.stem import WordNetLemmatizer
+nltk.download()
 import html
 import nltk
 import re
