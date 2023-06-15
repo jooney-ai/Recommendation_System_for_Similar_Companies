@@ -50,7 +50,6 @@ def preprocess_unescape(text):
     tokens = text.split()
     
     # 어근 추출 또는 표제어 추출
-    lemmatizer = WordNetLemmatizer()
     tokens = [ token for token in tokens if len(token) > 1 ]
 
     # 전처리된 텍스트 반환
